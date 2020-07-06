@@ -7,6 +7,7 @@ HEADERS = avdevice.h                                                    \
 OBJS    = alldevices.o                                                  \
           avdevice.o                                                    \
           utils.o                                                       \
+          cpu.o                                                         \
 
 OBJS-$(HAVE_LIBC_MSVCRT)                 += file_open.o
 OBJS-$(CONFIG_SHARED)                    += reverse.o
