@@ -71,7 +71,7 @@ static void *soaker_thread(void *p)
         uint8_t x = *(volatile uint8_t *)c;
         unsigned long busy_ns, idle_ns;
 
-        idle_ns = TIMESLICE_NS * x / 256.0;
+        idle_ns = TIMESLICE_NS * x / 255.0;
         busy_ns = TIMESLICE_NS-idle_ns;
 
         busy_loop(busy_ns);
